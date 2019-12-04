@@ -1,8 +1,9 @@
 <p>
+	<hr>
 	<strong><%= comment.commenter %></strong>: <%= comment.body %>
-
 	<%= link_to 'Delete', [comment.article, comment],
-        method: :delete,
+        method: :delete, class: "btn btn-outline-danger",
         data: { 
-        	confirm: 'Are you sure, '+comment.commenter+' ?' } %>
+			confirm: 'Are you sure, '+comment.commenter+' ?' } %>
+	
 </p>

@@ -1,6 +1,4 @@
 
-
-  
 <%= form_with model: @article, local: true do |form| %>
 <!-- catch errors if this page is routed to from somewhere -->
     <% if @article.errors.any? %>
@@ -17,21 +15,21 @@
     </div>
   <% end %>
   <!-- end of error catching block -->
-  
-  <p>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
-  </p>
-  
-  <p>
-    <%= form.label :text %><br>
-    <%= form.text_area :text %>
-  </p>
-  
-  <p>
-    <%= form.submit %>
-  </p>
-
+  <div class="form-group">
+    <p>
+      <%= form.label :title, 'Title:'%>
+        <%= form.text_field :title, class: "form-control form-control-lg" , placeholder: "Title should be greater than 5 characters." %>
+        </p>
+          
+    <p>
+      <%= form.label :text, 'What should it say?' %>
+      <%= form.text_area :text, class:"form-control", rows: "10", placeholder: "Go Bananas!" %>
+    </p>
+          
+    <p>
+      <%= form.submit class: "btn btn-outline-success" %>
+    </p>
+  </div>
 <% end %>
 
 

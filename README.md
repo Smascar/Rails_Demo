@@ -1,24 +1,44 @@
-# README
+# Blog post
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A rails webapp that can jot down your thoughts. Hosted on your private server. Accessible with REST api.
+<img src="./.readme_images/welcome_index.png" width="1000">
 
-Things you may want to cover:
+## Features 
 
-* Ruby version
+*   **Ruby on Rails.**
+*   CRUD articles.
+        <img src="./.readme_images/articles_index.png" width="1000">
+*   CRD comments.
+        <img src="./.readme_images/comment_insert.png" width="1000">
+*   Basic admin authentication for deletions.
+        <img src="./.readme_images/Auth.png" width="1000">
+*   Bootstrap.
+*   SQLite3 database.
+*   **RESTful.**
 
-* System dependencies
+## Requirements (Tested Configuration)
 
-* Configuration
+1. *ruby* --> 2.6.5p114
+2. *sqlite3* --> 3.28.0
+3. *rails* --> 6.0.1
 
-* Database creation
+## Installation
 
-* Database initialization
+To start the server,
 
-* How to run the test suite
+```ruby
+rails server
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+To run the application, open your browser and type,
+```
+localhost:3000
+```
 
-* Deployment instructions
+## Extras
 
-* ...
+* Individual edit
+    <img src="./.readme_images/article_edit_create.png" width="1000">
+
+* Expand article
+    <img src="./.readme_images/article_show.png" width="1000">

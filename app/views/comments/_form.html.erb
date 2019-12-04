@@ -1,14 +1,18 @@
 <!-- select article and then the comments associated with them -->
 <%= form_with(model: [ @article, @article.comments.build ], local: true) do |form| %>
-  <p>
-    <%= form.label :commenter %><br>
-    <%= form.text_field :commenter %>
-  </p>
-  <p>
-    <%= form.label :body %><br>
-    <%= form.text_area :body %>
-  </p>
-  <p>
-    <%= form.submit %>
-  </p>
+  <div class="form-group">
+    <p>
+      <%= form.label :commenter %>
+      <%= form.text_field :commenter, class: "form-control form-control-lg", placeholder: "Your name?"  %>
+    </p>
+
+    <p>
+      <%= form.label :body, "Would would you like to say?" %>
+      <%= form.text_area :body , class:"form-control", placeholder: "Say it here!" %>
+    </p>
+    <p>
+      <%= form.submit class: "btn btn-outline-success" %>
+    </p>
+  </div>
 <% end %>
+  

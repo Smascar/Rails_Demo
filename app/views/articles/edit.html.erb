@@ -1,7 +1,10 @@
-<h1>Edit Article</h1>
+
+<br>
+<h1>&nbsp;Edit Article</h1>
 
 <%= render 'form' %>
-<%= link_to 'Cancel edit', article_path(@article) %><br>
-<%= link_to 'Back to articles', articles_path %>
 
+<div>
+<a href=<%= article_path(@article) %> class="btn btn-danger">Discard Edit</a>
+</div>
 
