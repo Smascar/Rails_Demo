@@ -1,6 +1,7 @@
 # Blog post
 
 A rails webapp that can jot down your thoughts. Hosted on your private server. Accessible with REST api.
+
 <img src="./.readme_images/welcome_index.png" width="1000">
 
 ## Features 
