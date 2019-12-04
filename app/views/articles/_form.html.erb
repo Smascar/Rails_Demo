@@ -1,0 +1,37 @@
+
+
+  
+<%= form_with model: @article, local: true do |form| %>
+<!-- catch errors if this page is routed to from somewhere -->
+    <% if @article.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@article.errors.count, "step") %>
+        away from publishing!
+      </h2>
+      <ol>
+        <% @article.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ol>
+    </div>
+  <% end %>
+  <!-- end of error catching block -->
+  
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </p>
+  
+  <p>
+    <%= form.label :text %><br>
+    <%= form.text_area :text %>
+  </p>
+  
+  <p>
+    <%= form.submit %>
+  </p>
+
+<% end %>
+
+

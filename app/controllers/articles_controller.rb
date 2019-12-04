@@ -2,7 +2,12 @@ class ArticlesController < ApplicationController
   # Article handling logic.
   # index, show, new, edit, create, update, destroy
   # Each function corresponds to their respective html file. E.G. index.html.erb
- 
+
+
+  # Authentication handling. Ask password for everything except viewing.
+  http_basic_authenticate_with name: "admin", password: "admin", except: [:index, :show]
+
+
   def index
     # Show entire list of articles.
     @articles = Article.all
